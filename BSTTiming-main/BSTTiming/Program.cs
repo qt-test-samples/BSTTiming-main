@@ -21,8 +21,9 @@ namespace BSTTiming
 
         static void Main(string[] args)
         {
+
             string line;
-using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
@@ -31,25 +32,29 @@ using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timi
                 for (int i = 10; i <= 20; i++)
                 {
                     SIZE = (int)Math.Pow(2, i);
-                    line = RunBSTTiming(SIZE).ToString();
+                    line = RunBSTTiming(SIZE) + "";
 
+                    // Uncomment me
                     Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
             Console.WriteLine("Finished");
-            Console.ReadLine();
+            Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(int size)
         {
-            // Construct a randomly-generated balanced binary search tree
-            SortedSet<int> bst = GenerateTree(size);
+            // Construct a randomly-generated balanced 
+            //binary search tree
+            SortedSet<int> bst = generateTree(size);
 
-            int[] items = GenerateSearchItems(1024);
+            int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
             Stopwatch sw = new Stopwatch();
+
+            Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
@@ -66,7 +71,7 @@ using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timi
                     }
                 }
                 sw.Stop();
-                elapsed = Msecs(sw);
+                elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double totalAverage = elapsed / repetitions;
 
@@ -87,21 +92,21 @@ using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timi
                     }
                 }
                 sw.Stop();
-                elapsed = Msecs(sw);
+                elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-
+            
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] GenerateSearchItems(int size)
+        private static int[] generateSearchItems(int size)
         {
             HashSet<int> set = new HashSet<int>();
             Random random = new Random();
+            int num;
             for(int i = 0; i < size; i++)
             {
-                int num;
                 do
                 {
                     num = random.Next(0, size);
@@ -112,14 +117,14 @@ using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timi
             return set.ToArray();
         }
 
-        private static SortedSet<int> GenerateTree(int size)
+        private static SortedSet<int> generateTree(int size)
         {
             SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
 
+            int number;
             for (int i = 0; i < size; i++)
             {
-                int number;
                 do
                 {
                     number = random.Next(0, size);
@@ -127,16 +132,17 @@ using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timi
 
                 bst.Add(number);
             }
-
+            
             return bst;
         }
 
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double Msecs(Stopwatch sw)
+        public static double msecs(Stopwatch sw)
         {
             return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
+
     }
 }
