@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
@@ -50,9 +50,9 @@ namespace BSTTiming
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = generateTree(size);
+            SortedSet<int> bst = GenerateTree(size);
 
-            int[] items = generateSearchItems(1024);
+            int[] items = GenerateSearchItems(1024);
 
             // Create a stopwatch
             Stopwatch sw = new Stopwatch();
@@ -103,7 +103,7 @@ namespace BSTTiming
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] generateSearchItems(int size)
+        private static int[] GenerateSearchItems(int size)
         {
             HashSet<int> set = new HashSet<int>();
             Random random = new Random();
@@ -120,7 +120,7 @@ namespace BSTTiming
             return set.ToArray();
         }
 
-        private static SortedSet<int> generateTree(int size)
+        private static SortedSet<int> GenerateTree(int size)
         {
             SortedSet<int> bst = new SortedSet<int>();
             Random random = new Random();
@@ -135,7 +135,7 @@ namespace BSTTiming
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
