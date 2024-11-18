@@ -15,6 +15,8 @@ using System.Runtime;
 
 namespace BSTTiming
 {
+using System;
+
     class Program : System.Object
     {
         /// <summary>
@@ -22,7 +24,7 @@ namespace BSTTiming
         /// </summary>
         public const int DURATION = 1000;
 
-        public static int SIZE = 0;
+        public static System.Int32 SIZE = 0;
 
         static void Main(string[] args)
         {
