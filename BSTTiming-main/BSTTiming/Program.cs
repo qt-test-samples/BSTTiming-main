@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
+using System;
+
     class Program
     {
         /// <summary>
@@ -43,9 +45,9 @@ namespace BSTTiming
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static Double RunBSTTiming(int size)
         {
-            // Construct a randomly-generated balanced 
+            // Construct a randomly-generated balanced
             //binary search tree
             SortedSet<int> bst = generateTree(size);
 
