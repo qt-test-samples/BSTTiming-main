@@ -142,9 +142,9 @@ namespace BSTTiming
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static System.Double msecs(Stopwatch sw)
+        public static double msecs(Stopwatch sw)
         {
-            return (((System.Double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
+            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
 
     }
