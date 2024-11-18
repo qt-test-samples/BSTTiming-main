@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 
-// Basic system types are automatically imported
-
 namespace BSTTiming
 {
     class Program : System.Object
@@ -19,9 +17,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE = 0;
+        public static System.Int32 SIZE = 0;
 
         static void Main(string[] args)
         {
@@ -32,9 +30,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 Console.WriteLine(line);
                 file.WriteLine(line);
 
-                for (int i = 10; i <= 20; i++)
+                for (System.Int32 i = 10; i <= 20; i++)
                 {
-                    int size = (int)Math.Pow(2, i);
+                    System.Int32 size = (System.Int32)Math.Pow(2, i);
                     SIZE = size;
                     line = RunBSTTiming(size).ToString();
 
