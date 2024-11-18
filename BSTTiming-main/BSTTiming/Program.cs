@@ -11,9 +11,6 @@ using System.Numerics;
 using System.Globalization;
 using System.Runtime;
 
-// Explicitly import basic system types
-using Int32 = System.Int32;
-
 namespace BSTTiming
 {
     class Program : System.Object
