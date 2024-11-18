@@ -15,7 +15,7 @@ using System.Globalization;
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program : global::System.Object
     {
         /// <summary>
         /// Duration of one second
