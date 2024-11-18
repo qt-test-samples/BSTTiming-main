@@ -4,9 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-// Explicitly import System namespace to ensure basic types are recognized
-using System;
-
 namespace BSTTiming
 {
     static class Program
