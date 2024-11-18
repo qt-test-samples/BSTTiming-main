@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 
+// Explicitly import basic system types
+using Int32 = System.Int32;
+
 namespace BSTTiming
 {
     class Program : System.Object
