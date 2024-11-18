@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 using System.Runtime;
-using System.Console;
 
 namespace BSTTiming
 {
