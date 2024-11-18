@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program
+using System;
+
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
