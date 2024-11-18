@@ -11,20 +11,20 @@ using System.Numerics;
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         static void Main(string[] args)
         {
 
             string line;
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
