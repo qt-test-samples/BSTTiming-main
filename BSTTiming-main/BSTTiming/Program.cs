@@ -11,8 +11,6 @@ using System.Numerics;
 
 namespace BSTTiming
 {
-using System;
-
     class Program : System.Object
     {
         /// <summary>
