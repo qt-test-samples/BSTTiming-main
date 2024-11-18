@@ -10,11 +10,9 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 
-// Basic system types are automatically imported
-
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
@@ -56,8 +54,6 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
             // Create a stopwatch
             Stopwatch sw = new Stopwatch();
-
-            Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
