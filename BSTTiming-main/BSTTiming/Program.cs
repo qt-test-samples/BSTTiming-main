@@ -48,7 +48,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
-            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            Stopwatch sw = new Stopwatch();
 
             Random random = new Random();
 
@@ -72,7 +72,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             double totalAverage = elapsed / repetitions;
 
             // Create a stopwatch
-            sw = new System.Diagnostics.Stopwatch();
+            sw = new Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
             elapsed = 0;
@@ -135,9 +135,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double msecs(System.Diagnostics.Stopwatch sw)
+        public static double msecs(Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / System.Diagnostics.Stopwatch.Frequency) * 1000;
+            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
 
     }
