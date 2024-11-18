@@ -4,8 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime;
 
-using System;
-
 namespace BSTTiming
 {
     class Program : System.Object
