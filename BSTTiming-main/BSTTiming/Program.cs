@@ -12,7 +12,7 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const int DURATION = 1000; // One second in milliseconds
 
         public static int SIZE;
 
