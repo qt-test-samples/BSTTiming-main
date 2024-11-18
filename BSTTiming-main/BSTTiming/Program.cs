@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -39,7 +39,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
