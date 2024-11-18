@@ -10,8 +10,6 @@ using System.Runtime.InteropServices;
 
 namespace BSTTiming
 {
-using System;
-
     class Program
     {
         /// <summary>
