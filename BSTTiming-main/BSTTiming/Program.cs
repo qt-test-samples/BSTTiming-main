@@ -120,9 +120,9 @@ namespace BSTTiming
             return set.ToArray();
         }
 
-        private static SortedSet<int> generateTree(int size)
+        private static System.Collections.Generic.SortedSet<int> generateTree(int size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
+            System.Collections.Generic.SortedSet<int> bst = new System.Collections.Generic.SortedSet<int>();
             Random random = new Random();
 
             int number;
@@ -135,7 +135,7 @@ namespace BSTTiming
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
