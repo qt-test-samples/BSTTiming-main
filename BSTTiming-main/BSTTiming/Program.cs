@@ -19,7 +19,7 @@ namespace BSTTiming
         static void Main(string[] args)
         {
             string line;
-using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
@@ -36,7 +36,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 }
             }
             Console.WriteLine("Finished");
-            Console.Read();
+            Console.ReadLine();
         }
 
         public static double RunBSTTiming(int size)
@@ -91,7 +91,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-            
+
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
@@ -128,7 +128,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
