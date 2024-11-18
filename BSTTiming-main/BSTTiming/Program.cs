@@ -12,9 +12,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const Int32 DURATION = 1000;
 
-        public static int SIZE;
+        public static Int32 SIZE;
 
         static void Main(string[] args)
         {
@@ -40,7 +40,7 @@ namespace BSTTiming
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static double RunBSTTiming(Int32 size)
         {
             // Construct a randomly-generated balanced 
             //binary search tree
