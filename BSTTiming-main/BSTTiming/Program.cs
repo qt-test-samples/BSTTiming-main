@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 
+// Ensure System namespace is explicitly imported
+using System;
+
 // Basic system types are automatically imported
 
 namespace BSTTiming
