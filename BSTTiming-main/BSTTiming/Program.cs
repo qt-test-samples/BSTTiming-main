@@ -8,6 +8,9 @@ using System.Runtime.CompilerServices;
 using System.IO;
 using System.Runtime.InteropServices;
 
+// Explicitly import System namespace
+using System;
+
 namespace BSTTiming
 {
     class Program
