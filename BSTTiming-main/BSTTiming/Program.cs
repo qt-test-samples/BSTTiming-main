@@ -10,9 +10,11 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 
+// Basic system types are automatically imported
+
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -24,7 +26,7 @@ namespace BSTTiming
         static void Main(string[] args)
         {
             string line;
-using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
