@@ -13,6 +13,9 @@ using System.Numerics;
 using System.Collections;
 using System.Globalization;
 
+// Explicit using for System namespace
+using System;
+
 namespace BSTTiming
 {
     class Program : System.Object
