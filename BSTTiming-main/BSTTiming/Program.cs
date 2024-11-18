@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-using System;
-
     class Program : System.Object
     {
         /// <summary>
@@ -144,6 +142,5 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         {
             return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
-
     }
 }
