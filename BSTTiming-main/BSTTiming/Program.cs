@@ -22,9 +22,6 @@ namespace BSTTiming
 
         public static int SIZE;
 
-        // Explicit parameterless constructor
-        public Program() : base() { }
-
         static void Main(string[] args)
         {
 
