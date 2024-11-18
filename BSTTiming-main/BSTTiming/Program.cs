@@ -97,12 +97,12 @@ namespace BSTTiming
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] generateSearchItems(int size)
+        private static System.Int32[] generateSearchItems(System.Int32 size)
         {
-            HashSet<int> set = new HashSet<int>();
+            HashSet<System.Int32> set = new HashSet<System.Int32>();
             Random random = new Random();
-            int num;
-            for(int i = 0; i < size; i++)
+            System.Int32 num;
+            for(System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
