@@ -5,9 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// Explicit import of System namespace
-using System;
-
 namespace BSTTiming
 {
     class Program
