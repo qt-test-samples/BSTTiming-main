@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 using System.Runtime;
-using static System.Console;
+// Removed static import of Console
 
 namespace BSTTiming
 {
@@ -29,7 +29,7 @@ namespace BSTTiming
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                Console.WriteLine(line);
+                System.Console.WriteLine(line);
                 file.WriteLine(line);
 
                 for (int i = 10; i <= 20; i++)
@@ -38,12 +38,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                     SIZE = size;
                     line = RunBSTTiming(size).ToString();
 
-                    Console.WriteLine(line);
+                    System.Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
-            Console.WriteLine("Finished");
-            Console.Read();
+            System.Console.WriteLine("Finished");
+            System.Console.Read();
         }
 
         public static double RunBSTTiming(int size)
