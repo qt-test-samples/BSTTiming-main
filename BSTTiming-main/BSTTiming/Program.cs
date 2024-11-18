@@ -12,7 +12,7 @@ using System.Globalization;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -24,7 +24,7 @@ namespace BSTTiming
         static void Main(string[] args)
         {
             string line;
-using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
@@ -41,7 +41,7 @@ using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timi
                 }
             }
             Console.WriteLine("Finished");
-            Console.ReadLine();
+            Console.Read();
         }
 
         public static double RunBSTTiming(int size)
