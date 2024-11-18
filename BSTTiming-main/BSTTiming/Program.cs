@@ -4,11 +4,11 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System;  // Explicitly adding System namespace again
+using System.IO;
 
 namespace BSTTiming
 {
-    class Program
+    public class Program
     {
         /// <summary>
         /// Duration of one second
