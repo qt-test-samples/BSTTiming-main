@@ -7,16 +7,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-
-// Explicitly add core namespaces
 using System.Numerics;
 using System.Globalization;
 using System.Runtime;
 
 namespace BSTTiming
 {
-using System;
-
     class Program : System.Object
     {
         /// <summary>
