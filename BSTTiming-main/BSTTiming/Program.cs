@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Explicit import of System namespace
+using System;
+
 namespace BSTTiming
 {
     class Program
@@ -40,7 +43,7 @@ namespace BSTTiming
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static double RunBSTTiming(System.Int32 size)
         {
             // Construct a randomly-generated balanced 
             //binary search tree
