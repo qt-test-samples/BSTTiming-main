@@ -10,11 +10,10 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 using System.Runtime;
-using System; // Explicit import of System namespace
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
