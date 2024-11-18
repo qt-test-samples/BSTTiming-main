@@ -8,6 +8,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
+using System; // Explicit import of System namespace
+
 namespace BSTTiming
 {
     class Program : System.Object
@@ -17,7 +19,7 @@ namespace BSTTiming
         /// </summary>
         public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static global::System.Int32 SIZE;
 
         static void Main(string[] args)
         {
