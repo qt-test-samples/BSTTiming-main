@@ -24,38 +24,38 @@ namespace BSTTiming
         {
 
             string line;
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                Console.WriteLine(line);
+                System.Console.WriteLine(line);
                 file.WriteLine(line);
 
                 for (int i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)Math.Pow(2, i);
+                    SIZE = (int)System.Math.Pow(2, i);
                     line = RunBSTTiming(SIZE) + "";
 
                     // Uncomment me
-                    Console.WriteLine(line);
+                    System.Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
-            Console.WriteLine("Finished");
-            Console.Read();
+            System.Console.WriteLine("Finished");
+            System.Console.Read();
         }
 
         public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = generateTree(size);
+            System.Collections.Generic.SortedSet<int> bst = generateTree(size);
 
             int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
-            Random random = new Random();
+            System.Random random = new System.Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
@@ -77,7 +77,7 @@ namespace BSTTiming
             double totalAverage = elapsed / repetitions;
 
             // Create a stopwatch
-            sw = new Stopwatch();
+            sw = new System.Diagnostics.Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
             elapsed = 0;
@@ -96,15 +96,15 @@ namespace BSTTiming
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-            
+
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
 
         private static int[] generateSearchItems(int size)
         {
-            HashSet<int> set = new HashSet<int>();
-            Random random = new Random();
+            System.Collections.Generic.HashSet<int> set = new System.Collections.Generic.HashSet<int>();
+            System.Random random = new System.Random();
             int num;
             for(int i = 0; i < size; i++)
             {
@@ -118,10 +118,10 @@ namespace BSTTiming
             return set.ToArray();
         }
 
-        private static SortedSet<int> generateTree(int size)
+        private static System.Collections.Generic.SortedSet<int> generateTree(int size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
-            Random random = new Random();
+            System.Collections.Generic.SortedSet<int> bst = new System.Collections.Generic.SortedSet<int>();
+            System.Random random = new System.Random();
 
             int number;
             for (int i = 0; i < size; i++)
@@ -133,16 +133,16 @@ namespace BSTTiming
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double msecs(Stopwatch sw)
+        public static double msecs(System.Diagnostics.Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
+            return (((double)sw.ElapsedTicks) / System.Diagnostics.Stopwatch.Frequency) * 1000;
         }
 
     }
