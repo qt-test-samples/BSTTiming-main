@@ -8,14 +8,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
-
-// Additional explicit using directives
 using System.Collections;
 using System.Globalization;
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
