@@ -16,9 +16,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         static void Main(string[] args)
         {
@@ -44,22 +44,22 @@ namespace BSTTiming
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(System.Int32 size)
+        public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            System.Collections.Generic.SortedSet<System.Int32> bst = generateTree(size);
+            SortedSet<int> bst = generateTree(size);
 
-            System.Int32[] items = generateSearchItems(1024);
+            int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
-            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            Stopwatch sw = new Stopwatch();
 
-            System.Random random = new System.Random();
+            Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
-            System.Double elapsed = 0;
-            System.Int64 repetitions = 1;
+            double elapsed = 0;
+            long repetitions = 1;
             do
             {
                 repetitions *= 2;
@@ -101,12 +101,12 @@ namespace BSTTiming
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static System.Int32[] generateSearchItems(System.Int32 size)
+        private static int[] generateSearchItems(int size)
         {
-            System.Collections.Generic.HashSet<System.Int32> set = new System.Collections.Generic.HashSet<System.Int32>();
-            System.Random random = new System.Random();
-            System.Int32 num;
-            for(System.Int32 i = 0; i < size; i++)
+            HashSet<int> set = new HashSet<int>();
+            Random random = new Random();
+            int num;
+            for(int i = 0; i < size; i++)
             {
                 do
                 {
@@ -118,13 +118,13 @@ namespace BSTTiming
             return set.ToArray();
         }
 
-        private static System.Collections.Generic.SortedSet<System.Int32> generateTree(System.Int32 size)
+        private static SortedSet<int> generateTree(int size)
         {
-            System.Collections.Generic.SortedSet<System.Int32> bst = new System.Collections.Generic.SortedSet<System.Int32>();
-            System.Random random = new System.Random();
+            SortedSet<int> bst = new SortedSet<int>();
+            Random random = new Random();
 
-            System.Int32 number;
-            for (System.Int32 i = 0; i < size; i++)
+            int number;
+            for (int i = 0; i < size; i++)
             {
                 do
                 {
@@ -133,16 +133,16 @@ namespace BSTTiming
 
                 bst.Add(number);
             }
-
+            
             return bst;
         }
 
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static System.Double msecs(System.Diagnostics.Stopwatch sw)
+        public static double msecs(Stopwatch sw)
         {
-            return (((System.Double)sw.ElapsedTicks) / System.Diagnostics.Stopwatch.Frequency) * 1000;
+            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
 
     }
