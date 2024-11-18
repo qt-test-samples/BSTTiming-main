@@ -10,6 +10,8 @@ using System.Runtime.InteropServices;
 
 namespace BSTTiming
 {
+using System;
+
     class Program
     {
         /// <summary>
@@ -21,8 +23,8 @@ namespace BSTTiming
 
         static void Main(string[] args)
         {
-            
-            String line;
+
+            string line;
             using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
