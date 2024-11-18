@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace BSTTiming
 {
@@ -13,6 +14,12 @@ namespace BSTTiming
         public const int DURATION = 1000;
 
         public static int SIZE = 0;
+
+        [ModuleInitializer]
+        internal static void EnsureSystemTypesAreLoaded()
+        {
+            _ = typeof(int);
+        }
 
         static void Main(string[] args)
         {
