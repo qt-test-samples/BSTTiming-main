@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program : global::System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -142,9 +142,9 @@ namespace BSTTiming
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double msecs(Stopwatch sw)
+        public static global::System.Double msecs(global::System.Diagnostics.Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
+            return (((global::System.Double)sw.ElapsedTicks) / global::System.Diagnostics.Stopwatch.Frequency) * 1000;
         }
 
     }
