@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-using System; // Explicitly import System namespace
+global using System;
 
 namespace BSTTiming
 {
