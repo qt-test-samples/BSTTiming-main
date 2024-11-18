@@ -55,7 +55,7 @@ namespace BSTTiming
             int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
             Random random = new Random();
 
@@ -142,7 +142,7 @@ namespace BSTTiming
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double msecs(Stopwatch sw)
+        public static double msecs(System.Diagnostics.Stopwatch sw)
         {
             return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
