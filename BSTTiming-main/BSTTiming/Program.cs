@@ -13,9 +13,9 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const System.Int32 DURATION = 1000;
+        public const int DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static int SIZE;
 
         static void Main(string[] args)
         {
@@ -96,12 +96,12 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static System.Int32[] generateSearchItems(System.Int32 size)
+        private static int[] generateSearchItems(int size)
         {
-            HashSet<System.Int32> set = new HashSet<System.Int32>();
+            HashSet<int> set = new HashSet<int>();
             Random random = new Random();
-            System.Int32 num;
-            for(System.Int32 i = 0; i < size; i++)
+            int num;
+            for(int i = 0; i < size; i++)
             {
                 do
                 {
