@@ -8,7 +8,6 @@ using System.Runtime.InteropServices;
 
 namespace BSTTiming
 {
-using System;
     class Program : System.Object
     {
         /// <summary>
@@ -16,7 +15,7 @@ using System;
         /// </summary>
         public const int DURATION = 1000;
 
-        public static int SIZE;
+        public static System.Int32 SIZE;
 
         static void Main(string[] args)
         {
