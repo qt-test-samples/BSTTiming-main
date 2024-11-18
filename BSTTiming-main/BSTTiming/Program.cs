@@ -6,16 +6,18 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
+using System;
+
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
         public const int DURATION = 1000;
 
-        public static int SIZE = 0;
+        public static int SIZE;
 
         static void Main(string[] args)
         {
