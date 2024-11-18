@@ -1,4 +1,4 @@
-using System;
+global using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,8 +10,6 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-
-using System; // Explicitly import System namespace
 
 namespace BSTTiming
 {
