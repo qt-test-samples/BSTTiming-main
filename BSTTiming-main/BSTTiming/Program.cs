@@ -1,19 +1,19 @@
-global using System;
-global using System.Collections;
-global using System.Collections.Generic;
-global using System.Diagnostics;
-global using System.Globalization;
-global using System.IO;
-global using System.Linq;
-global using System.Numerics;
-global using System.Runtime.CompilerServices;
-global using System.Runtime.InteropServices;
-global using System.Text;
-global using System.Threading.Tasks;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -26,7 +26,7 @@ namespace BSTTiming
         {
 
             string line;
-using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
