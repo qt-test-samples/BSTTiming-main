@@ -34,4 +34,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.App.Ref" Version="9.0.0" />
+  </ItemGroup>
 </Project>
