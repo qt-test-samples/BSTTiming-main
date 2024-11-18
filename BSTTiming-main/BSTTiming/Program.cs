@@ -6,7 +6,7 @@ using System.Runtime;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -14,12 +14,6 @@ namespace BSTTiming
         public const int DURATION = 1000;
 
         public static int SIZE = 0;
-
-        [System.Runtime.CompilerServices.ModuleInitializer]
-        internal static void EnsureSystemInt32Loaded()
-        {
-            _ = typeof(int);
-        }
 
         static void Main(string[] args)
         {
