@@ -13,18 +13,20 @@ using System.Numerics;
 using System.Globalization;
 using System.Runtime;
 
-namespace BSTTiming
-{
+// Ensure basic types are recognized
 using System;
 
-    class Program : System.Object
+namespace BSTTiming
+{
+
+    class Program
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
         public const int DURATION = 1000;
 
-        public static System.Int32 SIZE = 0;
+        public static int SIZE = 0;
 
         static void Main(string[] args)
         {
