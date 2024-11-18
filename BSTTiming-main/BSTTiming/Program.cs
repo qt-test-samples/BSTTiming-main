@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 
 namespace BSTTiming
 {
-    class Program : Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
@@ -43,7 +43,7 @@ namespace BSTTiming
             Console.Read();
         }
 
-        public static double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced 
             //binary search tree
