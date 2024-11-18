@@ -36,7 +36,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 }
             }
             Console.WriteLine("Finished");
-            Console.ReadLine();
+            Console.Read();
         }
 
         public static double RunBSTTiming(int size)
