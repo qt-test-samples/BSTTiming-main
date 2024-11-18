@@ -13,8 +13,6 @@ using System.Runtime;
 
 namespace BSTTiming
 {
-using static System.Console;
-
     class Program : System.Object
     {
         /// <summary>
@@ -27,10 +25,10 @@ using static System.Console;
         static void Main(string[] args)
         {
             string line;
-using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                WriteLine(line);
+                Console.WriteLine(line);
                 file.WriteLine(line);
 
                 for (int i = 10; i <= 20; i++)
@@ -39,12 +37,12 @@ using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timi
                     SIZE = size;
                     line = RunBSTTiming(size).ToString();
 
-                    WriteLine(line);
+                    Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
-            WriteLine("Finished");
-            ReadLine();
+            Console.WriteLine("Finished");
+            Console.Read();
         }
 
         public static double RunBSTTiming(int size)
