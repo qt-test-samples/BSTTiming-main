@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 using System.Numerics;
 using System.Globalization;
 
-// Basic system types are automatically imported
-
 namespace BSTTiming
 {
     class Program : System.Object
