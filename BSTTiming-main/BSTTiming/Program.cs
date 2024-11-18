@@ -15,33 +15,33 @@ namespace BSTTiming
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const global::System.Int32 DURATION = 1000;
 
-        public static System.Int32 SIZE;
+        public static global::System.Int32 SIZE;
 
         static void Main(string[] args)
         {
-            string line;
-using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+            global::System.String line;
+using (global::System.IO.StreamWriter file = new global::System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                Console.WriteLine(line);
+                global::System.Console.WriteLine(line);
                 file.WriteLine(line);
 
-                for (int i = 10; i <= 20; i++)
+                for (global::System.Int32 i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)Math.Pow(2, i);
+                    SIZE = (global::System.Int32)global::System.Math.Pow(2, i);
                     line = RunBSTTiming(SIZE).ToString();
 
-                    Console.WriteLine(line);
+                    global::System.Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
-            Console.WriteLine("Finished");
-            Console.Read();
+            global::System.Console.WriteLine("Finished");
+            global::System.Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static global::System.Double RunBSTTiming(global::System.Int32 size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
