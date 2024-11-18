@@ -20,23 +20,22 @@ namespace BSTTiming
 
         public static System.Int32 SIZE;
 
-        static void Main(string[] args)
+        static void Main(System.String[] args)
         {
 
-            string line;
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+            System.String line;
+using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                Console.WriteLine(line);
+                System.Console.WriteLine(line);
                 file.WriteLine(line);
 
-                for (int i = 10; i <= 20; i++)
+                for (System.Int32 i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)Math.Pow(2, i);
-                    line = RunBSTTiming(SIZE) + "";
+                    SIZE = (System.Int32)System.Math.Pow(2, i);
+                    line = RunBSTTiming(SIZE).ToString();
 
-                    // Uncomment me
-                    Console.WriteLine(line);
+                    System.Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
@@ -44,29 +43,29 @@ namespace BSTTiming
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static System.Double RunBSTTiming(System.Int32 size)
         {
-            // Construct a randomly-generated balanced 
+            // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = generateTree(size);
+            System.Collections.Generic.SortedSet<System.Int32> bst = generateTree(size);
 
-            int[] items = generateSearchItems(1024);
+            System.Int32[] items = generateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
 
-            Random random = new Random();
+            System.Random random = new System.Random();
 
             // Keep increasing the number of repetitions until one second elapses.
-            double elapsed = 0;
-            long repetitions = 1;
+            System.Double elapsed = 0;
+            System.Int64 repetitions = 1;
             do
             {
                 repetitions *= 2;
                 sw.Restart();
-                for (int i = 0; i < repetitions; i++)
+                for (System.Int32 i = 0; i < repetitions; i++)
                 {
-                    for (int elt = 0; elt < 1024; elt++)
+                    for (System.Int32 elt = 0; elt < 1024; elt++)
                     {
                         bst.Contains(items[elt]);
                     }
@@ -74,10 +73,10 @@ namespace BSTTiming
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            double totalAverage = elapsed / repetitions;
+            System.Double totalAverage = elapsed / repetitions;
 
             // Create a stopwatch
-            sw = new Stopwatch();
+            sw = new System.Diagnostics.Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
             elapsed = 0;
@@ -86,27 +85,27 @@ namespace BSTTiming
             {
                 repetitions *= 2;
                 sw.Restart();
-                for (int i = 0; i < repetitions; i++)
+                for (System.Int32 i = 0; i < repetitions; i++)
                 {
-                    for (int elt = 0; elt < 1024; elt++)
+                    for (System.Int32 elt = 0; elt < 1024; elt++)
                     {
                     }
                 }
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            double overheadAverage = elapsed / repetitions;
-            
+            System.Double overheadAverage = elapsed / repetitions;
+
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
 
-        private static int[] generateSearchItems(int size)
+        private static System.Int32[] generateSearchItems(System.Int32 size)
         {
-            HashSet<int> set = new HashSet<int>();
-            Random random = new Random();
-            int num;
-            for(int i = 0; i < size; i++)
+            System.Collections.Generic.HashSet<System.Int32> set = new System.Collections.Generic.HashSet<System.Int32>();
+            System.Random random = new System.Random();
+            System.Int32 num;
+            for(System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
@@ -118,13 +117,13 @@ namespace BSTTiming
             return set.ToArray();
         }
 
-        private static SortedSet<int> generateTree(int size)
+        private static System.Collections.Generic.SortedSet<System.Int32> generateTree(System.Int32 size)
         {
-            SortedSet<int> bst = new SortedSet<int>();
-            Random random = new Random();
+            System.Collections.Generic.SortedSet<System.Int32> bst = new System.Collections.Generic.SortedSet<System.Int32>();
+            System.Random random = new System.Random();
 
-            int number;
-            for (int i = 0; i < size; i++)
+            System.Int32 number;
+            for (System.Int32 i = 0; i < size; i++)
             {
                 do
                 {
@@ -133,16 +132,16 @@ namespace BSTTiming
 
                 bst.Add(number);
             }
-            
+
             return bst;
         }
 
         /// <summary>
         /// Returns the number of milliseconds that have elapsed on the Stopwatch.
         /// </summary>
-        public static double msecs(Stopwatch sw)
+        public static System.Double msecs(System.Diagnostics.Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
+            return (((System.Double)sw.ElapsedTicks) / System.Diagnostics.Stopwatch.Frequency) * 1000;
         }
 
     }
