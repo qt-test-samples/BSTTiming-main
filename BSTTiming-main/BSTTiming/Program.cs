@@ -12,14 +12,14 @@ using System.Globalization;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE = 0;
+        public static System.Int32 SIZE = 0;
 
         static void Main(string[] args)
         {
