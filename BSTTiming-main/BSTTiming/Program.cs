@@ -11,8 +11,7 @@ using System.Numerics;
 
 namespace BSTTiming
 {
-using System;
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
