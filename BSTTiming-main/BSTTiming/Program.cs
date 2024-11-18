@@ -43,7 +43,7 @@ namespace BSTTiming
             Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced 
             //binary search tree
