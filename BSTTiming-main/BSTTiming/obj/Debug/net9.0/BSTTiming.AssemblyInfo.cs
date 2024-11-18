@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BSTTiming")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e752b054f33d547470d8165507f0aa903762cfd9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18985b48d79091fb1be6087b1af5f2436414556c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BSTTiming")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BSTTiming")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
