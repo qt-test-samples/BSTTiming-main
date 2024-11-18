@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
@@ -26,7 +26,7 @@ namespace BSTTiming
         {
 
             string line;
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
@@ -43,7 +43,7 @@ namespace BSTTiming
                 }
             }
             Console.WriteLine("Finished");
-            Console.Read();
+            Console.ReadLine();
         }
 
         public static System.Double RunBSTTiming(int size)
