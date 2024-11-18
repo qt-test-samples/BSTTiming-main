@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
+using System;
+using System.Collections.Generic;
+
     class Program
     {
         /// <summary>
