@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -89,9 +93,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-
+            
             // Return the difference, averaged over size
-            return (totalAverage - overheadAverage) / 1024.0;
+            return (totalAverage - overheadAverage) / 1024;
         }
 
         private static int[] generateSearchItems(int size)
@@ -135,7 +139,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         /// </summary>
         public static double msecs(Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / (double)Stopwatch.Frequency) * 1000.0;
+            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
 
     }
