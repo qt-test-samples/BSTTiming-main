@@ -8,6 +8,9 @@ using System.Runtime.CompilerServices;
 using System.IO;
 using System.Runtime.InteropServices;
 
+// Ensure that basic System types are available
+using System;
+
 namespace BSTTiming
 {
     class Program
