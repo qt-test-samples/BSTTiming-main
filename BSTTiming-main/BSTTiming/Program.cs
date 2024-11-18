@@ -17,7 +17,7 @@ namespace BSTTiming
         /// </summary>
         public const int DURATION = 1000;
 
-        public static int SIZE;
+        public static int SIZE = 0;
 
         static void Main(string[] args)
         {
@@ -30,8 +30,9 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
 
                 for (int i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)Math.Pow(2, i);
-                    line = RunBSTTiming(SIZE).ToString();
+                    int size = (int)Math.Pow(2, i);
+                    SIZE = size;
+                    line = RunBSTTiming(size).ToString();
 
                     Console.WriteLine(line);
                     file.WriteLine(line);
