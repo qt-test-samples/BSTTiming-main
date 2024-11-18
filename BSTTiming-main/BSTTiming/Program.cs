@@ -11,7 +11,7 @@ using System.Numerics;
 using System.Globalization;
 
 // Explicitly import basic system types
-using Int32 = System.Int32;
+using Int32 = global::System.Int32;
 
 namespace BSTTiming
 {
