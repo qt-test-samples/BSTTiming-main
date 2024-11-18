@@ -1,3 +1,5 @@
+namespace BSTTiming
+{
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,8 +13,6 @@ using System.Numerics;
 using System.Globalization;
 using System.Runtime;
 
-namespace BSTTiming
-{
     class Program : System.Object
     {
         /// <summary>
@@ -25,7 +25,7 @@ namespace BSTTiming
         static void Main(string[] args)
         {
             string line;
-using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (StreamWriter file = new StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
                 Console.WriteLine(line);
@@ -42,7 +42,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 }
             }
             Console.WriteLine("Finished");
-            Console.Read();
+            Console.ReadLine();
         }
 
         public static double RunBSTTiming(int size)
