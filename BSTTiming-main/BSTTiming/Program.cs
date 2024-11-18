@@ -9,6 +9,9 @@ using System.Collections.Generic;
 
 namespace BSTTiming
 {
+using System;
+using System.Void;
+
     class Program : System.Object
     {
         /// <summary>
