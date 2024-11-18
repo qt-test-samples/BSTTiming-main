@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
@@ -55,7 +51,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
             Random random = new Random();
 
             // Keep increasing the number of repetitions until one second elapses.
-            double elapsed = 0;
+            double elapsed = 0.0;
             long repetitions = 1;
             do
             {
@@ -71,13 +67,13 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            double totalAverage = elapsed / repetitions;
+            double totalAverage = elapsed / (double)repetitions;
 
             // Create a stopwatch
             sw = new Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
-            elapsed = 0;
+            elapsed = 0.0;
             repetitions = 1;
             do
             {
@@ -92,10 +88,10 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
                 sw.Stop();
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
-            double overheadAverage = elapsed / repetitions;
-            
+            double overheadAverage = elapsed / (double)repetitions;
+
             // Return the difference, averaged over size
-            return (totalAverage - overheadAverage) / 1024;
+            return (totalAverage - overheadAverage) / 1024.0;
         }
 
         private static int[] generateSearchItems(int size)
@@ -139,7 +135,7 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         /// </summary>
         public static double msecs(Stopwatch sw)
         {
-            return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
+            return (((double)sw.ElapsedTicks) / (double)Stopwatch.Frequency) * 1000.0;
         }
 
     }
