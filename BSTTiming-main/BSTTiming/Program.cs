@@ -26,38 +26,38 @@ namespace BSTTiming
         {
 
             string line;
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
+using (global::System.IO.StreamWriter file = new global::System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                Console.WriteLine(line);
+                global::System.Console.WriteLine(line);
                 file.WriteLine(line);
 
                 for (int i = 10; i <= 20; i++)
                 {
-                    SIZE = (int)Math.Pow(2, i);
+                    SIZE = (int)global::System.Math.Pow(2, i);
                     line = RunBSTTiming(SIZE) + "";
 
                     // Uncomment me
-                    Console.WriteLine(line);
+                    global::System.Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
-            Console.WriteLine("Finished");
-            Console.Read();
+            global::System.Console.WriteLine("Finished");
+            global::System.Console.Read();
         }
 
         public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
-            SortedSet<int> bst = generateTree(size);
+            global::System.Collections.Generic.SortedSet<int> bst = generateTree(size);
 
             int[] items = generateSearchItems(1024);
 
             // Create a stopwatch
-            Stopwatch sw = new Stopwatch();
+            global::System.Diagnostics.Stopwatch sw = new global::System.Diagnostics.Stopwatch();
 
-            Random random = new Random();
+            global::System.Random random = new global::System.Random();
 
             // Keep increasing the number of repetitions until one second elapses.
             double elapsed = 0;
@@ -79,7 +79,7 @@ namespace BSTTiming
             double totalAverage = elapsed / repetitions;
 
             // Create a stopwatch
-            sw = new Stopwatch();
+            sw = new global::System.Diagnostics.Stopwatch();
 
             // Keep increasing the number of repetitions until one second elapses.
             elapsed = 0;
@@ -98,7 +98,7 @@ namespace BSTTiming
                 elapsed = msecs(sw);
             } while (elapsed < DURATION);
             double overheadAverage = elapsed / repetitions;
-            
+
             // Return the difference, averaged over size
             return (totalAverage - overheadAverage) / 1024;
         }
