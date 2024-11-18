@@ -15,14 +15,16 @@ using System.Runtime;
 
 namespace BSTTiming
 {
-    class Program
+using System;
+
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
         public const int DURATION = 1000;
 
-        public static int SIZE = 0;
+        public static System.Int32 SIZE = 0;
 
         static void Main(string[] args)
         {
