@@ -14,7 +14,7 @@ using System.Runtime;
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
@@ -145,6 +145,5 @@ using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus
         {
             return (((double)sw.ElapsedTicks) / Stopwatch.Frequency) * 1000;
         }
-
     }
 }
