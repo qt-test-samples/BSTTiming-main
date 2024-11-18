@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -25,24 +25,24 @@ namespace BSTTiming
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                System.Console.WriteLine(line);
+                Console.WriteLine(line);
                 file.WriteLine(line);
 
                 for (int i = 10; i <= 20; i++)
                 {
-                    int size = (int)System.Math.Pow(2, i);
+                    int size = (int)Math.Pow(2, i);
                     SIZE = size;
                     line = RunBSTTiming(size).ToString();
 
-                    System.Console.WriteLine(line);
+                    Console.WriteLine(line);
                     file.WriteLine(line);
                 }
             }
-            System.Console.WriteLine("Finished");
-            System.Console.Read();
+            Console.WriteLine("Finished");
+            Console.Read();
         }
 
-        public static System.Double RunBSTTiming(int size)
+        public static double RunBSTTiming(int size)
         {
             // Construct a randomly-generated balanced
             //binary search tree
