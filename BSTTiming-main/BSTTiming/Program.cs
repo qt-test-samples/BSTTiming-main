@@ -7,18 +7,17 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System; // Explicit import of System namespace
 
 namespace BSTTiming
 {
-    class Program : System.Object
+    class Program
     {
         /// <summary>
         /// Duration of one second
         /// </summary>
-        public const int DURATION = 1000;
+        public const System.Int32 DURATION = 1000;
 
-        public static int SIZE = 0;
+        public static System.Int32 SIZE = 0;
 
         static void Main(string[] args)
         {
