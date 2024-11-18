@@ -11,8 +11,6 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-global using System;
-
 namespace BSTTiming
 {
     class Program : System.Object
