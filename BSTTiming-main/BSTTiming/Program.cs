@@ -19,11 +19,11 @@ namespace BSTTiming
 
         static void Main(string[] args)
         {
-            System.String line;
+            string line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
                 line = "Time";
-                System.Console.WriteLine(line);
+                Console.WriteLine(line);
                 file.WriteLine(line);
 
                 for (int i = 10; i <= 20; i++)
