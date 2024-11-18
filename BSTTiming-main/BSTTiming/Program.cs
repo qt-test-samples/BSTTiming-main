@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BSTTiming
 {
-    class Program
+    class Program : System.Object
     {
         /// <summary>
         /// Duration of one second
@@ -21,7 +21,6 @@ namespace BSTTiming
 
         static void Main(string[] args)
         {
-            bool dummy = true; // Adding a boolean variable to ensure System.Boolean is used
             string line;
 using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Jesus Zarate\Desktop\timingResults.txt"))
             {
