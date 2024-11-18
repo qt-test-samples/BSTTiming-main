@@ -9,9 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
 
-// Explicitly import the System namespace
-using System;
-
 namespace BSTTiming
 {
     class Program : System.Object
